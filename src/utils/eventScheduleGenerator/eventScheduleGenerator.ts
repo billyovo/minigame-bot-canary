@@ -1,4 +1,4 @@
-import { getOccurrencFromRRuleString, isToday, isTomorrow } from "./helper";
+import { getOccurrencFromRRuleString, isToday, isTomorrow } from "./helper.js";
 import { EventData, EventSchedule, EventScheduleItem } from "../../@types/eventSchedule";
 import { Collection } from "discord.js";
 

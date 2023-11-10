@@ -1,4 +1,4 @@
 import "dotenv/config";
-import "./managers/discord/discordManager";
-import "./managers/eventScheduleManager";
-import "./cronJobs/jobs";
+import "./managers/discord/discordManager.js";
+import "./managers/eventScheduleManager.js";
+import "./cronJobs/jobs.js";

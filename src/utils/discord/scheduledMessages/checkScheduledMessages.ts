@@ -1,8 +1,8 @@
 import { Collection, TextChannel } from "discord.js";
-import { scheduleTodayEventMessage, scheduleTomorrowEventMessage } from "./scheduleMessages";
+import { scheduleTodayEventMessage, scheduleTomorrowEventMessage } from "./scheduleMessages.js";
 import { DateTime } from "luxon";
-import { timeBetweenSurvivalAndSkyblockInMillisecond } from "../../../constants/times";
-import { ServerRoleMentionEnum } from "../../../enums/servers";
+import { timeBetweenSurvivalAndSkyblockInMillisecond } from "../../../constants/times.js";
+import { ServerRoleMentionEnum } from "../../../enums/servers.js";
 import { EventScheduleItem } from "../../../@types/eventSchedule";
 
 export function checkTomorrowScheduleMessage(options: {annoucementChannel: TextChannel, avatarURL: string, tomorrowEvents: Collection<string, EventScheduleItem>}) {

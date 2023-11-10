@@ -1,8 +1,9 @@
-import { RRule } from "rrule";
+import pkg from "rrule";
+const { RRule } = pkg;
 import { DateTime } from "luxon";
 
 export function getOccurrencFromRRuleString(fromDate: Date, rrule: string) : Date {
-	const rule : RRule = RRule.fromString(rrule);
+	const rule = RRule.fromString(rrule);
 	const fromDateUTC : Date = DateTime.fromJSDate(fromDate).plus({ hours: 8 }).toJSDate();
 	const nextOccurrence : Date = rule.after(fromDateUTC, true) as Date;
 

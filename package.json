@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "start": "node dist/index.js",
-    "build": "tsup src/index.ts --minify",
+    "build": "tsc -p .",
     "register": "ts-node ./src/commands/register",
     "fix": "eslint src --fix",
     "test": "jest"
@@ -43,5 +43,6 @@
     "*.ts": [
       "eslint --fix"
     ]
-  }
+  },
+  "type": "module"
 }

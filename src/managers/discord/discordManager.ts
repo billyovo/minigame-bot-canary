@@ -1,14 +1,14 @@
 import { Events, GatewayIntentBits, TextChannel } from "discord.js";
-import { getAnnoucementChannel } from "../../utils/discord/startup/getAnnoucementChannel";
-import config from "../../configs/config.json";
+import { getAnnoucementChannel } from "../../utils/discord/startup/getAnnoucementChannel.js";
+import { config } from "../../configs/config.js";
 import { DiscordClient } from "../../@types/discord";
-import { ExtendedDiscordClient } from "./client";
-import { loadSlashCommands } from "../../utils/discord/startup/loadCommands";
-import { handleInteraction } from "../../commands/handler/interactionHandler";
-import { updateStatus } from "../../utils/discord/updateStatus";
-import { eventSchedule } from "../eventScheduleManager";
-import { checkTodayScheduleMessage, checkTomorrowScheduleMessage } from "../../utils/discord/scheduledMessages/checkScheduledMessages";
-import { checkGuildScheduledEvents } from "../../utils/discord/guildScheduledEvents/checkGuildScheduledEvents";
+import { ExtendedDiscordClient } from "./client.js";
+import { loadSlashCommands } from "../../utils/discord/startup/loadCommands.js";
+import { handleInteraction } from "../../commands/handler/interactionHandler.js";
+import { updateStatus } from "../../utils/discord/updateStatus.js";
+import { eventSchedule } from "../eventScheduleManager.js";
+import { checkTodayScheduleMessage, checkTomorrowScheduleMessage } from "../../utils/discord/scheduledMessages/checkScheduledMessages.js";
+import { checkGuildScheduledEvents } from "../../utils/discord/guildScheduledEvents/checkGuildScheduledEvents.js";
 
 export const client : DiscordClient = new ExtendedDiscordClient({
 	intents: [

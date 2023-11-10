@@ -3,9 +3,10 @@ import fs from "fs";
 import url from "node:url";
 import { Collection } from "discord.js";
 import { CommandsCollection } from "../../../@types/discord";
+import { __dirname } from "../../../constants/dir.js";
 
 export async function loadSlashCommands() : Promise<CommandsCollection> {
-	const foldersPath = path.join(process.cwd(), "./src/commands/execution");
+	const foldersPath = path.resolve(__dirname, process.env.NODE_ENV === "production" ? "./dist/commands/execution" : "./src/commands/execution");
 	const commandFiles = fs.readdirSync(foldersPath);
 
 	const commandsCollection : CommandsCollection = new Collection();

@@ -1,5 +1,5 @@
 import { SlashCommandBuilder, SlashCommandStringOption } from "discord.js";
-import events from "../../configs/events.json";
+import { events } from "../../configs/events.js";
 import { EventData } from "../../@types/eventSchedule";
 
 

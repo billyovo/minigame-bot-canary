@@ -1,11 +1,11 @@
 import { GuildScheduledEvent, GuildScheduledEventEntityType } from "discord.js";
 import { EventScheduleItem } from "../../../@types/eventSchedule";
 import { checkGuildScheduledEventsOptions, createGuildScheduleEventOptions } from "../../../@types/guildScheduleEvents";
-import { guildEventScheduleDuration, guildEventScheduleTime, timeBetweenSurvivalAndSkyblockInMillisecond } from "../../../constants/times";
-import { ServerNameChineseEnum, ServerNameEnum } from "../../../enums/servers";
-import { getGuildScheduledEventMessage } from "../../../assets/messages/messages";
+import { guildEventScheduleDuration, guildEventScheduleTime, timeBetweenSurvivalAndSkyblockInMillisecond } from "../../../constants/times.js";
+import { ServerNameChineseEnum, ServerNameEnum } from "../../../enums/servers.js";
+import { getGuildScheduledEventMessage } from "../../../assets/messages/messages.js";
 import path from "path";
-
+import { __dirname } from "../../../constants/dir.js";
 export async function checkGuildScheduledEvents(options : checkGuildScheduledEventsOptions) : Promise<void> {
 	const shouldBeScheduledDateLimit = new Date(Date.now() + guildEventScheduleTime);
 	const currentScheduledEvents = await options.guild.scheduledEvents.fetch();
