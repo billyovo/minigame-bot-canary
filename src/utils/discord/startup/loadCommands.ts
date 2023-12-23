@@ -6,7 +6,7 @@ import { CommandsCollection } from "../../../@types/discord";
 import { logger } from "../../../logger/logger";
 
 export async function loadSlashCommands() : Promise<CommandsCollection> {
-	const foldersPath = path.join(process.cwd(), "./src/commands/execution");
+	const foldersPath = path.join(process.cwd(), process.env.NODE_ENV === "production" ? "./dist/commands/execution" : "./src/commands/execution");
 	const commandFiles = fs.readdirSync(foldersPath);
 
 	const commandsCollection : CommandsCollection = new Collection();
