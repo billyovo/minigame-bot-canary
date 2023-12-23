@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES6",
-    "module": "CommonJS",
+    "module": "NodeNext",
     "rootDir": "./src",
     "paths":{
       "@assets/*": ["./src/assets/*"],
@@ -22,7 +22,8 @@
   },
   "exclude": [
     "node_modules",
-    "dist"
+    "dist",
+    "src/tests"
   ],
   "include": [
     "src/**/*",
