@@ -12,7 +12,7 @@ export function getEventTomorrowEmbed(options: EventTomorrowEmbedOptions) : Embe
 		.setColor(embedColor)
 		.setTitle("活動提示")
 		.setURL(config.homePage)
-		.setThumbnail(`${config.homePage}/images/${options.event.id}.png`)
+		.setThumbnail(`${config.staticAssetsPage}/logo/events/${options.event.id}/${options.event.id}.png`)
 		.addFields(
 			{ name: "\u200B", value: `小遊戲 **${options.event.title}** 將於 **明天(<t:${eventTime.toSeconds()}:d>)** 舉行` },
 			{ name: "\u200B", value: "__時間__:" },
