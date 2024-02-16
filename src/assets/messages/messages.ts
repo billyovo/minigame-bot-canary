@@ -59,6 +59,7 @@ export function getEventMazeTomorrowEmbed(options: {avatar: string, resetTime: D
 	const embed = new EmbedBuilder()
 		.setColor(embedColor)
 		.setTitle("迷宮重置提示")
+		.setURL(config.homePage)
 		.addFields(
 			{ name: "\u200B", value: `🧭 小遊戲 **赤翠迷蹤** 將於 **明天(<t:${resetTimeInSecond}:d>)** 進行迷宮重置 🧭` },
 			{ name: "\u200B", value: "__重置及開放時間__:" },
