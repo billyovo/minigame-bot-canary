@@ -8,6 +8,6 @@ export function updateStatus(client : ExtendedDiscordClient, eventsToday: Collec
 		client.user?.setActivity(eventNames, { type: ActivityType.Playing });
 	}
 	else {
-		client.user?.setActivity("今天沒有小遊戲 :(", { type: ActivityType.Watching });
+		client.user?.setActivity("今天沒有小遊戲 :(", { type: ActivityType.Custom });
 	}
 }
