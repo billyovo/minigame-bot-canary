@@ -41,12 +41,15 @@ export async function handleTextCommand(message: Message) {
 			gameName: gameName,
 		});
 
-		message.channel.send(getEventWinnerMessage({
+		const winMessage = await message.channel.send(getEventWinnerMessage({
 			server: server,
 			game: gameName,
 			name: playerName,
 		}));
 
+		if (winMessage?.crosspostable) {
+			winMessage.crosspost();
+		}
 
 		return;
 	}
