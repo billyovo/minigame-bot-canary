@@ -41,7 +41,7 @@ export function getSingleEventTimeMessage(options: EventTimeOptions) : string {
 	const skyblock = `${ServerEmoteEnum.SKYBLOCK} ${ServerNameChineseEnum.SKYBLOCK}: <t:${skyblockTime.toSeconds()}:${options.timestampType}>`;
 	const survival = `${ServerEmoteEnum.SURVIVAL} ${ServerNameChineseEnum.SURVIVAL}: <t:${survivalTime.toSeconds()}:${options.timestampType}>`;
 
-	const bannerURL = `https://minigame-api.letsdream.today/banner/banner-today.png?t=${DateTime.now().toMillis()}}`;
+	const bannerURL = `https://minigame-api.letsdream.today/banner/banner-today.png?t=${DateTime.now().toMillis()}`;
 
 	return `${title}\r\n${skyblock}\r\n${survival}\r\n\r\n${bannerURL}`;
 }
