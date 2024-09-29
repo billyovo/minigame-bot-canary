@@ -43,7 +43,7 @@ export function getSingleEventTimeMessage(options: EventTimeOptions) : string {
 
 	const bannerURL = `https://minigame-api.letsdream.today/banner/banner-today.png?t=${DateTime.now().toMillis()}`;
 
-	return `${title}\r\n${skyblock}\r\n${survival}\r\n\r\n${bannerURL}`;
+	return `[${title}](bannerURL)\r\n${skyblock}\r\n${survival}`;
 }
 
 export function getGuildScheduledEventMessage(options : {server: ServerNameChineseEnum}) : string {
